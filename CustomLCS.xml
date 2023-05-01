@@ -4,25 +4,25 @@
   <EVOware>Custom Liquidclasses</EVOware>
   <LiquidClass name="&gt;&gt; Ethanol free dispense - ECL bead carryover &lt;&lt;	43" liquidName="General liquid class for the Liquid Handling Arm" default="False" customized="True">
     <Global>
-      <LLD mode="2" conductivity="2" speed="12" doubleDist="4" />
-      <Clot limit="2" speed="50" />
-      <LAC check="False" density="0.3" lowerDev="0" lowerDevUnit="1" upperDev="0" upperDevUnit="1" onError="0" />
-      <PMP viscosity="3" sensitivity="1" character="5" />
+      <LLD mode="7" conductivity="2" speed="60" doubleDist="4" />
+      <Clot limit="4" speed="50" />
+      <LAC check="False" density="0.8" lowerDev="0" lowerDevUnit="1" upperDev="0" upperDevUnit="1" onError="0" />
+      <PMP viscosity="1" sensitivity="1" character="0" />
     </Global>
     <SubClasses>
       <SubClass tipType="Standard" all="False" min="3" max="1000.01">
         <Aspirate>
-          <Single speed="23" delay="400" pinchValve="False">
+          <Single speed="150" delay="400" pinchValve="False">
             <STAG volume="0" speed="70" delay="0" />
             <LAG volume="10" speed="70" delay="0" />
-            <TAG volume="10" speed="23" delay="0" />
+            <TAG volume="10" speed="70" delay="0" />
             <Excess volume="0" unit="0" destination="0" replaceCounter="1" />
             <Conditioning volume="0" destination="1" />
           </Single>
           <Multi speed="150" delay="600" pinchValve="False">
             <STAG volume="0" speed="50" delay="0" />
             <LAG volume="0" speed="70" delay="0" />
-            <TAG volume="15" speed="23" delay="0" />
+            <TAG volume="15" speed="50" delay="0" />
             <Excess volume="15" unit="1" destination="0" replaceCounter="1" />
             <Conditioning volume="25" destination="1" />
           </Multi>
@@ -92,7 +92,7 @@
           <Backlash TAG="1" Sample="1" TagVolume="2" SampleVolume="2" />
         </MuPipPlunger>
       </SubClass>
-      <SubClass tipType="DiTi" all="False" min="4" max="1000.01">
+      <SubClass tipType="DiTi" all="False" min="3" max="1000.01">
         <Aspirate>
           <Single speed="150" delay="400" pinchValve="False">
             <STAG volume="0" speed="70" delay="0" />
@@ -301,7 +301,7 @@
               <Tip8 separate="False" offset="0" factor="1" />
             </Single>
             <Multi>
-              <Tip1 separate="True" offset="0" factor="1" />
+              <Tip1 separate="False" offset="0" factor="1" />
               <Tip2 separate="False" offset="0" factor="1" />
               <Tip3 separate="False" offset="0" factor="1" />
               <Tip4 separate="False" offset="0" factor="1" />
