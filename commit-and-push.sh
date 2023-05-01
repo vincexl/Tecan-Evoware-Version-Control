@@ -5,6 +5,7 @@ cp /Users/vhu/dev/lh-version-control/tecan-backup/rnd-t7-evo.robo.counsyl.com/Cu
 
 # Exit if there are no changes to commit
 if [ -z "$(git status --porcelain)" ]; then
+  echo "No changes to commit."
   exit 0
 fi
 
