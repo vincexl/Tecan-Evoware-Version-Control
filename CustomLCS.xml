@@ -92,7 +92,7 @@
           <Backlash TAG="1" Sample="1" TagVolume="2" SampleVolume="2" />
         </MuPipPlunger>
       </SubClass>
-      <SubClass tipType="DiTi" all="False" min="3" max="1000.01">
+      <SubClass tipType="DiTi" all="False" min="4" max="1000.01">
         <Aspirate>
           <Single speed="150" delay="400" pinchValve="False">
             <STAG volume="0" speed="70" delay="0" />
