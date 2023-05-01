@@ -7,7 +7,7 @@
       <LLD mode="2" conductivity="2" speed="12" doubleDist="4" />
       <Clot limit="3" speed="50" />
       <LAC check="False" density="0.3" lowerDev="0" lowerDevUnit="1" upperDev="0" upperDevUnit="1" onError="0" />
-      <PMP viscosity="3" sensitivity="1" character="5" />
+      <PMP viscosity="2" sensitivity="1" character="5" />
     </Global>
     <SubClasses>
       <SubClass tipType="Standard" all="False" min="3" max="1000.01">
