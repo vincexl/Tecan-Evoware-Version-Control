@@ -5,7 +5,7 @@
   <LiquidClass name="&gt;&gt; Ethanol free dispense - ECL bead carryover &lt;&lt;	43" liquidName="General liquid class for the Liquid Handling Arm" default="False" customized="True">
     <Global>
       <LLD mode="2" conductivity="2" speed="12" doubleDist="4" />
-      <Clot limit="4" speed="50" />
+      <Clot limit="3" speed="50" />
       <LAC check="False" density="0.3" lowerDev="0" lowerDevUnit="1" upperDev="0" upperDevUnit="1" onError="0" />
       <PMP viscosity="3" sensitivity="1" character="5" />
     </Global>
@@ -22,7 +22,7 @@
           <Multi speed="150" delay="600" pinchValve="False">
             <STAG volume="0" speed="50" delay="0" />
             <LAG volume="0" speed="70" delay="0" />
-            <TAG volume="15" speed="50" delay="0" />
+            <TAG volume="15" speed="23" delay="0" />
             <Excess volume="15" unit="1" destination="0" replaceCounter="1" />
             <Conditioning volume="25" destination="1" />
           </Multi>
