@@ -15,7 +15,7 @@
           <Single speed="23" delay="400" pinchValve="False">
             <STAG volume="0" speed="70" delay="0" />
             <LAG volume="10" speed="70" delay="0" />
-            <TAG volume="10" speed="70" delay="0" />
+            <TAG volume="10" speed="23" delay="0" />
             <Excess volume="0" unit="0" destination="0" replaceCounter="1" />
             <Conditioning volume="0" destination="1" />
           </Single>
