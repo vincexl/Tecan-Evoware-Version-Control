@@ -12,7 +12,7 @@
     <SubClasses>
       <SubClass tipType="Standard" all="False" min="3" max="1000.01">
         <Aspirate>
-          <Single speed="150" delay="400" pinchValve="False">
+          <Single speed="23" delay="400" pinchValve="False">
             <STAG volume="0" speed="70" delay="0" />
             <LAG volume="10" speed="70" delay="0" />
             <TAG volume="10" speed="70" delay="0" />
