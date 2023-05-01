@@ -301,7 +301,7 @@
               <Tip8 separate="False" offset="0" factor="1" />
             </Single>
             <Multi>
-              <Tip1 separate="False" offset="0" factor="1" />
+              <Tip1 separate="True" offset="0" factor="1" />
               <Tip2 separate="False" offset="0" factor="1" />
               <Tip3 separate="False" offset="0" factor="1" />
               <Tip4 separate="False" offset="0" factor="1" />
