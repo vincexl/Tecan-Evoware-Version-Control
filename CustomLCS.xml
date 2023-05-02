@@ -4,7 +4,7 @@
   <EVOware>Custom Liquidclasses</EVOware>
   <LiquidClass name="&gt;&gt; Ethanol free dispense - ECL bead carryover &lt;&lt;	43" liquidName="General liquid class for the Liquid Handling Arm" default="False" customized="True">
     <Global>
-      <LLD mode="7" conductivity="2" speed="32" doubleDist="4" />
+      <LLD mode="7" conductivity="2" speed="60" doubleDist="4" />
       <Clot limit="4" speed="50" />
       <LAC check="False" density="0.8" lowerDev="0" lowerDevUnit="1" upperDev="0" upperDevUnit="1" onError="0" />
       <PMP viscosity="1" sensitivity="1" character="0" />
