@@ -1,0 +1,196 @@
+0E0ED85E
+20200312_112116 Admin           
+                                                                                                                                
+Administrator                                                                                                                   
+--{ RES }--
+V;200
+--{ CFG }--
+999;219;32;
+14;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;322;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;12;-1;-1;-1;-1;-1;-1;12;-1;-1;-1;-1;-1;-1;12;-1;-1;-1;-1;-1;-1;12;-1;-1;-1;-1;-1;-1;12;-1;-1;-1;-1;-1;-1;12;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;8;;;;;;;Washstation 2Grid DiTi Waste;;
+998;;;;;;;;;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;3;DiTi 50ul Filter LiHa;JS sDTS Reagent Rack;;
+998;p50;reagent;;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;3;DiTi 200ul Filter LiHa;Eppendorf TwinTec 96;;
+998;p200;assay;;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;3;DiTi 1000ul Filter LiHa;JS AB 1127;;
+998;p1000;cleanup;;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;3;;;;
+998;;;;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;3;;JS AB 1127 + magnet;;
+998;;cleanup on magnet;;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;3;;;;
+998;;;;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;1;
+998;4;0;System;
+998;0;
+998;1;
+996;0;0;
+--{ RPG }--
+Set_DITI_Counter2("DiTi 50ul Filter LiHa","26","1","1",0);
+UserPrompt("Place 50 uL hyb clean beads in A2 of reagent plate.Place 1.2 mL ethanol in B2 of reagent plate.Place 1 mL EB in C2 of reagent plate.",0,-1);
+Set_DITI_Counter2("DiTi 200ul Filter LiHa","33","1","1",0);
+Group("Transfer Sample");
+GetDITI2(3,"DiTi 200ul Filter LiHa",0,0,0,70);
+Aspirate(3,"JS_SDTS_SAMPLE_ASP","110","110",0,0,0,0,0,0,0,0,0,0,33,1,1,"0C0830000000000000",0,0);
+Dispense(3,"JS_SDTS_SAMPLE_ASP","110","110",0,0,0,0,0,0,0,0,0,0,40,1,1,"0C0830000000000000",0,0);
+DropDITI(3,13,6,10,70,0);
+GroupEnd();
+Group("Mix Beads");
+GetDITI2(1,"DiTi 50ul Filter LiHa",0,0,0,70);
+Mix(1,"JS_SDTS_HYB_CLEAN_BEADS_MIX","40",0,0,0,0,0,0,0,0,0,0,0,26,1,1,"0604@000",5,0,0);
+DropDITI(1,13,6,10,70,0);
+GroupEnd();
+Group("Transfer Beads");
+GetDITI2(3,"DiTi 50ul Filter LiHa",0,0,0,70);
+Aspirate(1,"JS_SDTS_HYB_CLEAN_BEADS_ASP","10",0,0,0,0,0,0,0,0,0,0,0,26,1,1,"0604@000",0,0);
+Aspirate(2,"JS_SDTS_HYB_CLEAN_BEADS_ASP",0,"10",0,0,0,0,0,0,0,0,0,0,26,1,1,"0604@000",0,0);
+Dispense(3,"JS_SDTS_HYB_CLEAN_BEADS_ASP","10","10",0,0,0,0,0,0,0,0,0,0,40,1,1,"0C0830000000000000",0,0);
+DropDITI(3,13,6,10,70,0);
+GetDITI2(3,"DiTi 200ul Filter LiHa",0,0,0,70);
+Mix(3,"JS_SDTS_HYB_SAMPLE_MIX","90","90",0,0,0,0,0,0,0,0,0,0,40,1,1,"0C0830000000000000",20,0,0);
+DropDITI(3,13,6,10,70,0);
+GroupEnd();
+UserPrompt("Move plate to bioshake.Shake at 2000 RPM for 30 sec.Incubate for 5 min.Move to magnet for 3 min.",0,-1);
+UserPrompt("Confirm that cleanup plate is on magnet.",0,-1);
+Group("Remove Supernatant");
+GetDITI2(3,"DiTi 200ul Filter LiHa",0,0,0,70);
+Aspirate(3,"JS_SDTS_SUP_REMOVAL","130","130",0,0,0,0,0,0,0,0,0,0,54,1,1,"0C0830000000000000",0,0);
+DropDITI(3,13,6,10,70,0);
+GroupEnd();
+Group("Stamp Ethanol");
+GetDITI2(3,"DiTi 1000ul Filter LiHa",0,0,0,70);
+Aspirate(1,"JS_SDTS_ETH_ASP","200",0,0,0,0,0,0,0,0,0,0,0,26,1,1,"0604P000",0,0);
+Aspirate(2,"JS_SDTS_ETH_ASP",0,"200",0,0,0,0,0,0,0,0,0,0,26,1,1,"0604P000",0,0);
+Dispense(3,"JS_SDTS_ETH_ASP","200","200",0,0,0,0,0,0,0,0,0,0,54,1,1,"0C0830000000000000",0,0);
+DropDITI(3,13,6,10,70,0);
+GroupEnd();
+UserPrompt("Move cleanup plate to bioshake.Shake at 1400RPM for 10 sec.Move cleanup plate to magnet.Incubate for 30 sec.",0,-1);
+UserPrompt("Confirm that cleanup plate is on the magnet.",0,-1);
+Group("Remove Ethanol");
+GetDITI2(3,"DiTi 1000ul Filter LiHa",0,0,0,70);
+Aspirate(3,"JS_SDTS_SUP_REMOVAL","240","240",0,0,0,0,0,0,0,0,0,0,54,1,1,"0C0830000000000000",0,0);
+DropDITI(3,13,6,10,70,0);
+GroupEnd();
+UserPrompt("Incubate/dry beads for 5 min.",0,-1);
+Group("Stamp EB");
+GetDITI2(3,"DiTi 200ul Filter LiHa",0,0,0,70);
+Aspirate(1,"JS_SDTS_EB_ASP","125",0,0,0,0,0,0,0,0,0,0,0,26,1,1,"0604p000",0,0);
+Aspirate(2,"JS_SDTS_EB_ASP",0,"125",0,0,0,0,0,0,0,0,0,0,26,1,1,"0604p000",0,0);
+Dispense(3,"JS_SDTS_EB_ASP","125","125",0,0,0,0,0,0,0,0,0,0,54,1,1,"0C0830000000000000",0,0);
+DropDITI(15,13,6,10,70,0);
+GroupEnd();
+UserPrompt("Move the cleanup plate to bioshake.Shake at 1800RPM for 30 sec.Incubate for 90 sec.Move the plate back to the magnet. Incubate for 60 sec.",0,-1);
+Group("Elution");
+Group("Batch Main");
+GetDITI2(15,"DiTi 50ul Filter LiHa",0,0,0,70);
+Aspirate(1,"JS_SDTS_ELUTION","30",0,0,0,0,0,0,0,0,0,0,0,54,1,1,"0C0810000000000000",0,0);
+Aspirate(2,"JS_SDTS_ELUTION",0,"30",0,0,0,0,0,0,0,0,0,0,54,1,1,"0C0810000000000000",0,0);
+Aspirate(4,"JS_SDTS_ELUTION",0,0,"30",0,0,0,0,0,0,0,0,0,54,1,1,"0C0810000000000000",0,0);
+Aspirate(8,"JS_SDTS_ELUTION",0,0,0,"30",0,0,0,0,0,0,0,0,54,1,1,"0C0810000000000000",0,0);
+Dispense(15,"JS_SDTS_ELUTION","30","30","30","30",0,0,0,0,0,0,0,0,33,1,1,"0C0800l00000000000",0,0);
+DropDITI(15,13,6,10,70,0);
+GroupEnd();
+Group("Batch Special");
+GetDITI2(15,"DiTi 50ul Filter LiHa",0,0,0,70);
+Aspirate(1,"JS_SDTS_ELUTION","30",0,0,0,0,0,0,0,0,0,0,0,54,1,1,"0C0820000000000000",0,0);
+Aspirate(2,"JS_SDTS_ELUTION",0,"30",0,0,0,0,0,0,0,0,0,0,54,1,1,"0C0820000000000000",0,0);
+Aspirate(4,"JS_SDTS_ELUTION",0,0,"30",0,0,0,0,0,0,0,0,0,54,1,1,"0C0820000000000000",0,0);
+Aspirate(8,"JS_SDTS_ELUTION",0,0,0,"30",0,0,0,0,0,0,0,0,54,1,1,"0C0820000000000000",0,0);
+Dispense(15,"JS_SDTS_ELUTION","30","30","30","30",0,0,0,0,0,0,0,0,33,1,1,"0C0800p70000000000",0,0);
+DropDITI(15,13,6,10,70,0);
+GroupEnd();
+GroupEnd();

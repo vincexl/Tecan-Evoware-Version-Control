@@ -1,0 +1,170 @@
+11FF7FB5
+20200309_131113 Admin           
+                                                                                                                                
+Administrator                                                                                                                   
+--{ RES }--
+V;200
+--{ CFG }--
+999;219;32;
+14;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;322;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;12;-1;-1;-1;-1;-1;-1;12;-1;-1;-1;-1;-1;-1;12;-1;-1;-1;-1;-1;-1;12;-1;-1;-1;-1;-1;-1;12;-1;-1;-1;-1;-1;-1;12;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;8;;;;;;;Washstation 2Grid DiTi Waste;;
+998;;;;;;;;;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;3;DiTi 50ul Filter LiHa;JS sDTS Reagent Rack;;
+998;p50;reagent;;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;3;DiTi 200ul Filter LiHa;96 Well UV Clean Plate;JS sDTS Assay Plate;
+998;p200;clean;assay;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;3;DiTi 1000ul Filter LiHa;96 Well UV Clean Plate;;
+998;p1000;clean2;;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;3;DiTi 50ul Filter LiHa;JS AB 1127;;
+998;p50 2;cleanup;;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;3;DiTi 50ul Filter LiHa;JS AB 1127 + magnet;;
+998;p50 3;cleanup on magnet;;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;3;;;;
+998;;;;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;0;
+998;1;
+998;4;0;System;
+998;0;
+998;1;
+996;0;0;
+--{ RPG }--
+Set_DITI_Counter2("DiTi 50ul Filter LiHa","26","1","1",0);
+Set_DITI_Counter2("DiTi 200ul Filter LiHa","33","1","1",0);
+Set_DITI_Counter2("DiTi 1000ul Filter LiHa","40","1","1",0);
+UserPrompt("Place the UV clean plate and cleanup plate in the correct positions.Place 1 mL of beads in B5 of reagent plate.Place 1 mL of ethanol in C5 of reagent plate.Place 1 mL of EB in D5 of reagent plate.",0,-1);
+Group("Stamp Beads");
+GetDITI2(1,"DiTi 1000ul Filter LiHa",0,0,0,70);
+Aspirate(1,"JS_SDTS_BEADS_ASP","500",0,0,0,0,0,0,0,0,0,0,0,26,1,1,"06040080",0,0);
+Dispense(1,"JS_SDTS_BEADS_ASP","500",0,0,0,0,0,0,0,0,0,0,0,47,1,1,"0C0810000000000000",0,0);
+DropDITI(1,13,6,10,70,0);
+GroupEnd();
+Worklist(0,C:\Users\counsyl\Desktop\4048.gwl,255,"JS_SDTS_CONSOL",0,0);GetDITI2(255,"DiTi 50ul Filter LiHa",0,0,0,70);DropDITI(255,13,6,10,70,0);
+Worklist(1,,0,"",0,0);GetDITI2(255,"DiTi 50ul Filter LiHa",0,0,0,70);DropDITI(255,13,6,10,70,0);
+Worklist(0,C:\Users\counsyl\Desktop\4075.gwl,255,"JS_SDTS_CONSOL",0,0);GetDITI2(255,"DiTi 50ul Filter LiHa",0,0,0,70);DropDITI(255,13,6,10,70,0);
+Worklist(1,,0,"",0,0);GetDITI2(255,"DiTi 50ul Filter LiHa",0,0,0,70);DropDITI(255,13,6,10,70,0);
+UserPrompt("Manually mix the sample and bead.Bead bind for 5 min.Move cleanup plate to magnet.Bead separate for 8 min.",0,-1);
+Group("Remove Supernatant");
+GetDITI2(1,"DiTi 1000ul Filter LiHa",0,0,0,70);
+Aspirate(1,"JS_SDTS_SUP_REMOVAL","900",0,0,0,0,0,0,0,0,0,0,0,54,1,1,"0C0810000000000000",0,0);
+DropDITI(1,13,6,10,70,0);
+GroupEnd();
+Group("Stamp Ethanol");
+GetDITI2(1,"DiTi 1000ul Filter LiHa",0,0,0,70);
+Aspirate(1,"JS_SDTS_ETH_ASP","200",0,0,0,0,0,0,0,0,0,0,0,26,1,1,"060400@0",0,0);
+Dispense(1,"JS_SDTS_ETH_ASP","200",0,0,0,0,0,0,0,0,0,0,0,54,1,1,"0C0810000000000000",0,0);
+DropDITI(1,13,6,10,70,0);
+GroupEnd();
+UserPrompt("Move cleanup plate to bioshake.Shake at 1400 RPM for 10 sec.Move cleanup plate to magnet.Bead separate for 30 sec.",0,-1);
+Group("Remove Ethanol");
+GetDITI2(1,"DiTi 1000ul Filter LiHa",0,0,0,70);
+Aspirate(1,"JS_SDTS_SUP_REMOVAL","300",0,0,0,0,0,0,0,0,0,0,0,54,1,1,"0C0810000000000000",0,0);
+DropDITI(3,13,6,10,70,0);
+GroupEnd();
+UserPrompt("Bead dry for 5 min.",0,-1);
+Group("Stamp EB");
+GetDITI2(1,"DiTi 200ul Filter LiHa",0,0,0,70);
+Aspirate(1,"JS_SDTS_EB_ASP","85",0,0,0,0,0,0,0,0,0,0,0,26,1,1,"060400P0",0,0);
+Dispense(1,"JS_SDTS_EB_ASP","85",0,0,0,0,0,0,0,0,0,0,0,54,1,1,"0C0810000000000000",0,0);
+DropDITI(1,13,6,10,70,0);
+GroupEnd();
+UserPrompt("Move cleanup plate to bioshake.Shake at 2000 RPM for 2 min.Move cleanup plate to magnet.Bead separate for 1 min.",0,-1);
+Group("Final Elution");
+GetDITI2(3,"DiTi 50ul Filter LiHa",0,0,0,70);
+Aspirate(1,"JS_SDTS_ELUTION","40",0,0,0,0,0,0,0,0,0,0,0,54,1,1,"0C0810000000000000",0,0);
+Aspirate(2,"JS_SDTS_ELUTION",0,"40",0,0,0,0,0,0,0,0,0,0,54,1,1,"0C0810000000000000",0,0);
+Dispense(3,"JS_SDTS_ELUTION","40","40",0,0,0,0,0,0,0,0,0,0,33,2,1,"0C0830000000000000",0,0);
+DropDITI(3,13,6,10,70,0);
+GroupEnd();
+UserPrompt("Proceed to Strand Elimination or store assay plate at 4C.",0,-1);
