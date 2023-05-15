@@ -1,6 +1,6 @@
 #!/bin/bash
 
-message=${1}
+message=$
 
 # Copy the latest version of the .xml file to the Git repository directory
 cp /Users/vhu/dev/lh-version-control/tecan-backup/rnd-t7-evo.robo.counsyl.com/CustomLCS.xml /Users/vhu/dev/lh-version-control/rnd-t7-evo/CustomLCS.xml
