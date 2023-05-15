@@ -22,7 +22,7 @@
           <Multi speed="4" delay="1000" pinchValve="False">
             <STAG volume="0" speed="5" delay="0" />
             <LAG volume="0" speed="10" delay="0" />
-            <TAG volume="0.5" speed="5" delay="0" />
+            <TAG volume="0.6" speed="5" delay="0" />
             <Excess volume="0" unit="0" destination="0" replaceCounter="1" />
             <Conditioning volume="0" destination="1" />
           </Multi>
@@ -33,7 +33,7 @@
         </Aspirate>
         <Dispense>
           <Single speed="4" breakoff="150" delay="500" tag="False" pinchValve="False" delayBefore="0" />
-          <Multi speed="25" breakoff="150" delay="0" tag="False" pinchValve="False" delayBefore="0" />
+          <Multi speed="26" breakoff="150" delay="0" tag="False" pinchValve="False" delayBefore="0" />
           <LLD detect="True" position="2" offset="-1.5" xOffset="0" yOffset="0" onError="-1" />
           <TipTouching direction="0" speed="10" delay="100" />
           <Mix enabled="False" volume="30" cycles="4" position="0" offset="0" />
@@ -66,7 +66,7 @@
             </Multi>
           </Separate>
         </Calibration>
-        <MPCalibration dropVolume="1" offsetV="0" factorV="1" offsetF="0" factorF="1" offsetPW="0" factorPW="1">
+        <MPCalibration dropVolume="2" offsetV="0" factorV="1" offsetF="0" factorF="1" offsetPW="0" factorPW="1">
           <Separate>
             <Tip1 separate="False" voltage="100" frequency="80" pulseWidth="45" />
             <Tip2 separate="False" voltage="100" frequency="80" pulseWidth="45" />
@@ -351,7 +351,7 @@
           </Aspirate>
           <Dispense>
             <Single accel="150" decel="600" voldepspeed="False" />
-            <Multi accel="150" decel="600" voldepspeed="False" />
+            <Multi accel="160" decel="600" voldepspeed="False" />
           </Dispense>
           <Impulse custom="False" voltage="0" frequency="0" />
           <Synch plungerStart="0" plungerDuration="100" piezo1Start="0" piezo1Duration="0" piezo2Start="0" piezo2Duration="0" pinchPulses="0" />

@@ -6,7 +6,7 @@
     <Global>
       <LLD mode="7" conductivity="2" speed="60" doubleDist="4" />
       <Clot limit="4" speed="50" />
-      <LAC check="False" density="0.8" lowerDev="0" lowerDevUnit="1" upperDev="0" upperDevUnit="1" onError="0" />
+      <LAC check="False" density="0.3" lowerDev="0" lowerDevUnit="1" upperDev="0" upperDevUnit="1" onError="0" />
       <PMP viscosity="1" sensitivity="1" character="0" />
     </Global>
     <SubClasses>
@@ -19,7 +19,7 @@
             <Excess volume="0" unit="0" destination="0" replaceCounter="1" />
             <Conditioning volume="0" destination="1" />
           </Single>
-          <Multi speed="150" delay="600" pinchValve="False">
+          <Multi speed="150" delay="200" pinchValve="False">
             <STAG volume="0" speed="50" delay="0" />
             <LAG volume="0" speed="70" delay="0" />
             <TAG volume="23" speed="50" delay="0" />
@@ -644,7 +644,7 @@
           <Separate>
             <Tip1 separate="False" voltage="100" frequency="80" pulseWidth="45" />
             <Tip2 separate="False" voltage="100" frequency="80" pulseWidth="45" />
-            <Tip3 separate="False" voltage="100" frequency="80" pulseWidth="45" />
+            <Tip3 separate="False" voltage="70" frequency="80" pulseWidth="45" />
             <Tip4 separate="False" voltage="100" frequency="80" pulseWidth="45" />
             <Tip5 separate="False" voltage="100" frequency="80" pulseWidth="45" />
             <Tip6 separate="False" voltage="100" frequency="80" pulseWidth="45" />
