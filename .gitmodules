@@ -1,0 +1,3 @@
+[submodule "Tecan-Version-Control-App"]
+	path = Tecan-Version-Control-App
+	url = git@github.com:myriadgenetics/Tecan-Version-Control-App.git
